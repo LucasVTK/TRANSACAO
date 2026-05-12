@@ -10,6 +10,12 @@ const OrderController = {
     const resp = await PedidoRepository.create(model);
     res.status(200).json(resp);
   },
+
+  async edit(req, res){
+    const model = req.body
+    const resp = await PedidoRepository.update(model)
+    res.status(200).json(resp)
+  }
 };
 
 export default OrderController;
